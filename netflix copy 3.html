@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="netflix.css">
+    <style>
+        
+        .image-button:hover{
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .image-button img{
+            width: fit-content;
+            height: 100%;
+            padding: 0px 0px 0px 0px;
+        }
+        
+        .image-button{
+            height: 200px;
+            padding: 0px;
+            background-color: #141414;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 1px solid black;
+            background-color: black;
+            z-index: 10;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <div id="loader"></div>
+    
+    <header>
+
+      <nav>
+        
+           <div class="netflix">
+    </nav>
+        <nav class="navbar">
+            <div class="logo">
+          <a href="index2.html"> </a>
+          <img src="images/Logo.png" style="cursor: pointer;">
+          </div>
+           
+<ul class="nav-links">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+          </a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Unlimited Movies, TV Shows, and More.</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <p>Join Us Now.</p>
+    </section>
+  </div>
+    <section class="movies-section">
+        <h2>Trending Now</h2>
+        <div class="movies-grid">
+            
+            <button onclick="openPopup('popup1')" class="image-button"><img src="Images\malayalam-film-2018-latest-pictures-7341.jpg"></button>
+            <button onclick="openPopup('popup2')" class="image-button"><img src="Images/images.jpeg" alt="Movie 2"></button>
+            <button onclick="openPopup('popup3')" class="image-button"><img src="Images/Movie.jpeg" alt="Movie 3"></button>
+            <button onclick="openPopup('popup4')" class="image-button"><img src="Images/Movie5.jpeg" alt="Movie 4"></button>
+            <button onclick="openPopup('popup5')" class="image-button"><img src="Images/Movie6.jpeg" alt="Movie 5"></button>
+            <button onclick="openPopup('popup6')" class="image-button"><img src="Images/Movie7.jpeg" alt="Movie 5"></button>
+            <button onclick="openPopup('popup7')" class="image-button"><img src="Images/sub-buzz-522-1603402374-56.webp" alt="Movie 5"></button>
+            <button onclick="openPopup('popup8')" class="image-button"><img src="Images/Movie8.jpeg" alt="Movie 5"></button>
+            
+
+
+            <!-- Pop-up 1 -->
+            <div id="popup1" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/bhGCb9J0MRU?si=0bINJGP3FRIxorSz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>2018</p>
+                <button onclick="closePopup('popup1')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+        
+            <!-- Pop-up 2 -->
+            <div id="popup2" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/hRFY_Fesa9Q?si=KD6xu6ShHoXMByug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Bad Boys</p>
+                <button onclick="closePopup('popup2')">Close</button>
+            </div>
+        
+            <!-- Pop-up 3 -->
+            <div id="popup3" class="popup">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aWzlQ2N6qqg?si=75awS4gFfzg96QSp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Dr. Strange</p>
+                <button onclick="closePopup('popup3')">Close</button>
+            </div>
+            <div id="popup4" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/5WfTEZJnv_8?si=cK4RTCVVnb2ZNwaO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Quantamania</p>
+                <button onclick="closePopup('popup4')">Close</button>
+            </div>
+            <div id="popup5" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/WDkg3h8PCVU?si=XBTx4Z7IEF8eX5Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Aquaman.</p>
+                <button onclick="closePopup('popup5')">Close</button>
+            </div>
+            <div id="popup6" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/2QKg5SZ_35I?si=J8CZPkcb8JtfFl5e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Jumanji.</p>
+                <button onclick="closePopup('popup6')">Close</button>
+            </div>
+            <div id="popup7" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/oUlgwJNdu2I?si=AG02xv8h_I9ogNsS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Hellraiser</p>
+                <button onclick="closePopup('popup7')">Close</button>
+            </div>
+            <div id="popup8" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/uFHpdTXm3gI?si=ndsSVFTmzY-MQlOK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Devara-Part1</p>
+                <button onclick="closePopup('popup8')">Close</button>
+            </div>
+        
+            <!-- Overlay -->
+            <div id="overlay" class="overlay"></div>
+        
+            </div>
+            <br><br><Br>
+
+            <h2>Top English Movies</h2>
+            <div class="movies-grid">
+           <button onclick="openPopup('popup9')"   class="image-button"> <img src="Images/Eng1.jfif"></button>
+           <button onclick="openPopup('popup10')"  class="image-button"><img src="Images/Eng2.jfif"></button>
+           <button onclick="openPopup('popup11')" class="image-button"><img src="Images/Eng3.jfif"></button>
+           <button onclick="openPopup('popup12')" class="image-button"><img src="Images/Eng4.jfif"></button>
+           <button onclick="openPopup('popup13')" class="image-button"><img src="Images/Eng5.jfif"></button>
+           <button onclick="openPopup('popup14')" class="image-button"><img src="Images/Eng6.jfif"></button>
+           <button onclick="openPopup('popup15')" class="image-button"><img src="Images/Eng7.jfif"></button>
+           <button onclick="openPopup('popup16')" class="image-button"> <img src="Images/Eng8.jfif"></button>
+
+
+            <div id="popup9" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/YoHD9XEInc0?si=4BcpcyPw8ukNYZlu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Inception</p>
+                <button onclick="closePopup('popup9')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup10" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/ti-b0hGdggQ?si=iKOZr4ILZGgEMhtF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Avatar</p>
+                <button onclick="closePopup('popup10')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup11" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/_Z3QKkl1WyM?si=ypzsf47bitcPsMrt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Wakanda Forever</p>
+                <button onclick="closePopup('popup11')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup12" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c?si=h7Ia0IyYcMg0s9c_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>The Avengers</p>
+                <button onclick="closePopup('popup12')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup13" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/zAGVQLHvwOY?si=4VnGkmsAOcIqhU3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>The Joker</p>
+                <button onclick="closePopup('popup13')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup14" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/ZBvK6ni97W8?si=56hOsN_ulGlpMnpJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>The Judge</p>
+                <button onclick="closePopup('popup14')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup15" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/UaVTIH8mujA?si=4_cgyGhJnRW7fFvX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>The GodFather</p>
+                <button onclick="closePopup('popup15')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup16" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/ZuQuOnYnr3Q?si=Kjvy-39qiS0ymGvX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>insidious</p>
+                <button onclick="closePopup('popup16')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+            <div id="overlay" class="overlay"></div>
+        
+        </div>
+            <br><br><Br>
+                <div>
+                    <h2>Top Hindi Movies</h2>
+            <div class="movies-grid">
+           <button onclick="openPopup('popup17')" class="image-button"> <img src="Images/Hindi1.jpg"></button>
+           <button onclick="openPopup('popup18')" class="image-button"> <img src="Images/Hindi2.jpg"></button>
+           <button onclick="openPopup('popup19')" class="image-button">  <img src="Images/Hindi3.jpg"></button>
+           <button onclick="openPopup('popup20')" class="image-button">  <img src="Images/Hindi4.jpg"></button>
+           <button onclick="openPopup('popup21')" class="image-button">  <img src="Images/Hindi5.jpg"></button>
+           <button onclick="openPopup('popup22')" class="image-button">  <img src="Images/Hindi 9.jpg"></button>
+           <button onclick="openPopup('popup23')" class="image-button">  <img src="Images/Hindi 10.jpg"></button>
+           <button onclick="openPopup('popup24')" class="image-button">  <img src="Images/Hindi8.jpg"></button>
+
+
+            <div id="popup17" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/3fO1f9TndAM?si=iNTc8rMYu74H0aUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Golmaal</p>
+                <button onclick="closePopup('popup17')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup18" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/x_7YlGv9u1g?si=HvUUPaTn6lNVowrx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Dangal</p>
+                <button onclick="closePopup('popup18')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup19" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/G62HrubdD6o?si=9Oy0VkwY_gNU0FXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Bahubali 2</p>
+                <button onclick="closePopup('popup19')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup20" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/is4ZkFNLnnk?si=Ou4vOgZwF9G9uRwP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>3 Idiots</p>
+                <button onclick="closePopup('popup20')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup21" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/4nwAra0mz_Q?si=8j4KpMKjK66DNNqV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Bajrangi Bhaijaan</p>
+                <button onclick="closePopup('popup21')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup22" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/6L6XqWoS8tw?si=rSxANLxGbYZiApVj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>MS:Dhoni The Untold Story</p>
+                <button onclick="closePopup('popup22')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup23" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/KVnheXywIbY?si=ezIlt0f80BcExdTu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>Stree 2</p>
+                <button onclick="closePopup('popup23')" style="padding: 2px 2px; margin: 5px;">Close</button>
+            </div>
+
+            <div id="popup24" class="popup">
+                <h2><iframe width="560" height="315" src="https://www.youtube.com/embed/tsxemFX0a7k?si=UFgbyyC6TSz4gPQG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+                <p>chhichhore</p>
+                <button onclick="closePopup('popup24')" style="padding: 2px 2px; margin: 5px;">Close</button>
+                </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Siddharth, Priyansh and Vansh. All Rights Reserved.</p>
+    </footer>
+
+<script>
+    
+    var loader = document.getElementById("loader");
+
+
+    window.addEventListener('load', function(load) {
+  window.removeEventListener('load', load, false);               
+  setTimeout(function(){loader.style.display = 'none'},2000);
+
+},false);
+
+
+
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+        
+     function closePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+</script>
+
+</body>
+</html>
